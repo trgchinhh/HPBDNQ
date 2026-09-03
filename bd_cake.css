@@ -17,9 +17,6 @@ body {
   margin: -10em auto 0 auto;
 }
 
-/* ============================================== Candle
-*/
-
 .velas {
   background: #ffffff;
   border-radius: 10px;
@@ -51,8 +48,7 @@ body {
   left: 0;
 }
 
-/* ============================================== Fire
-*/
+
 
 .fuego {
   border-radius: 100%;
@@ -79,8 +75,7 @@ body {
   animation: fuego 0.2s 6.5s infinite;
 }
 
-/* ============================================== Animation Fire
-*/
+
 
 @keyframes fuego {
   0%,
@@ -129,7 +124,7 @@ color: #000000;
 margin: 80px auto 0;
 }
 
-/* Toàn bộ vùng nền dưới cùng */
+
 .letter-bg {
 min-height: 100vh;
 background: linear-gradient(to bottom right, #ffe7da, #fff3eb, #ffdada);
@@ -139,16 +134,16 @@ align-items: center;
 flex-direction: column;
 }
 
-/* Vùng chứa chính */
+
 .letter-section {
 text-align: center;
-/*font-family: 'Segoe UI', cursive;*/
+
 font-family: "JetBrains Mono", Consolas, "Courier New", monospace;
 color: #5b3b1b;
 padding: 100px 20px;
 }
 
-/* Phong bì */
+
 .envelope {
 position: relative;
 width: 800px;
@@ -163,7 +158,7 @@ transition: transform 0.5s ease;
 transform-origin: top center;
 }
 
-/* Khi màn hình nhỏ hơn 900px thì tự scale nhỏ lại */
+
 @media (max-width: 900px) {
 .envelope {
     transform: scale(0.9);
@@ -184,7 +179,7 @@ transform-origin: top center;
 transform: scale(1.03);
 }
 
-/* Nắp thư */
+
 .flap {
 position: absolute;
 top: 0;
@@ -198,7 +193,7 @@ transform-origin: top;
 z-index: 3;
 }
 
-/* Trái tim ở giữa phong bì */
+
 .heart {
 position: absolute;
 top: 48%;
@@ -222,7 +217,7 @@ border-radius: 50%;
 .heart::before { top: -15px; left: 0; }
 .heart::after { left: -15px; top: 0; }
 
-/* Lá thư bên trong */
+
 .letter {
 position: absolute;
 top: 30%;
@@ -288,7 +283,7 @@ object-fit: cover;
 box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-/* Khi mở thư */
+
 .envelope.open .flap {
 transform: rotateX(180deg);
 }
@@ -340,9 +335,7 @@ transform: translateX(-50%) translateY(-25%);
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-/* =========================================================
-   THEME
-   ========================================================= */
+
 
 :root {
     --page-bg: #ee9ca7;
@@ -350,7 +343,7 @@ transform: translateX(-50%) translateY(-25%);
     --letter-bg: #fff;
 }
 
-/* LIGHT mặc định */
+
 html {
     background: var(--page-bg);
 }
@@ -363,10 +356,6 @@ body {
         color 0.4s ease;
 }
 
-
-/* =========================================================
-   CANVAS VŨ TRỤ
-   ========================================================= */
 
 #bg-canvas {
     position: absolute;
@@ -385,10 +374,6 @@ html.light #bg-canvas {
     opacity: 0;
 }
 
-
-/* =========================================================
-   NÚT DARK / LIGHT
-   ========================================================= */
 
 .theme-toggle {
     position: fixed;
@@ -442,10 +427,6 @@ html.light #bg-canvas {
 }
 
 
-/* =========================================================
-   DARK MODE
-   ========================================================= */
-
 html:not(.light) {
     --page-bg: #050509;
     --page-text: #edeaf7;
@@ -475,9 +456,7 @@ html:not(.light) .theme-toggle .icon-moon {
 }
 
 
-/* =========================================================
-   LÁ THƯ TRONG SUỐT KHI DARK
-   ========================================================= */
+
 
 html:not(.light) .letter-bg {
     background: transparent;
@@ -502,7 +481,7 @@ html:not(.light) .envelope {
 }
 
 
-/* Phần giấy thư cũng glass */
+
 html:not(.light) .letter {
     background: rgba(255, 255, 255, 0.055);
 
@@ -519,7 +498,7 @@ html:not(.light) .letter {
 }
 
 
-/* Nắp thư cũng glass trong dark */
+
 html:not(.light) .flap {
     background: rgba(255, 255, 255, 0.10);
     backdrop-filter: blur(15px);
@@ -527,7 +506,7 @@ html:not(.light) .flap {
 }
 
 
-/* Nội dung thư */
+
 html:not(.light) .letter-content,
 html:not(.light) .letter-content .text {
     color: #f1eff8;
@@ -536,11 +515,6 @@ html:not(.light) .letter-content .text {
 html:not(.light) .letter p {
     color: #f1eff8;
 }
-
-
-/* =========================================================
-   VIEW TRANSITION
-   ========================================================= */
 
 ::view-transition-old(root),
 ::view-transition-new(root) {
